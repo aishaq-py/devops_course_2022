@@ -1,7 +1,7 @@
 [build-system]
 # Minimum requirements for the build system to execute.
 requires = ["setuptools", "wheel"]  # PEP 508 specifications.
-build-backend = "setuptools.build.meta"
+build-backend = "setuptools.build_meta"
 
 #Error on deploy
 ##If you are trying to create a single distribution with multiple modules
