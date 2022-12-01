@@ -1,9 +1,7 @@
 [build-system]
 # Minimum requirements for the build system to execute.
 requires = ["setuptools", "wheel"]  # PEP 508 specifications.
-install_requires =
-  random
-  string
+build-backend = "setuptools.build.meta"
 
 #Error on deploy
 ##If you are trying to create a single distribution with multiple modules
@@ -13,5 +11,6 @@ install_requires =
 #1. set up custom discovery (`find` directive with `include` or `exclude`)
 #2. use a `src-layout`
 #3. explicitly set `py_modules` or `packages` with a list of names
+
 
 
