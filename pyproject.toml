@@ -1,3 +1,15 @@
 [build-system]
 # Minimum requirements for the build system to execute.
 requires = ["setuptools", "wheel"]  # PEP 508 specifications.
+
+
+#Error on deploy
+##If you are trying to create a single distribution with multiple modules
+##on purpose, you should not rely on automatic discovery.
+##Instead, consider the following options:
+
+#1. set up custom discovery (`find` directive with `include` or `exclude`)
+#2. use a `src-layout`
+#3. explicitly set `py_modules` or `packages` with a list of names
+
+packages = find:
