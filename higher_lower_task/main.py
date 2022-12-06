@@ -17,7 +17,9 @@ for i in range(10):
   
   #assigns previous number to previous
   previous = numb
+  #print(previous) -> test print every loop to ensure that previous is the previous numb
   numb = randint(1, 13)
+  #print(numb) -> test print every loop to ensure that randint is changing
   
   #rerolls numb until numb does not equal previous
   while previous == numb:
