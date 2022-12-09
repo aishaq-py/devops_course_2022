@@ -1,0 +1,25 @@
+Strengths of current setup
+--------
+1) The code ensures that the user will not encounter equalling numbers and thus have their "H" "L" answer as invalid.
+   This means there is no need to handle this "edge case".
+   
+2) The randint are procedurally generated. The alternative is to generate all randint before user input, store as a list, then iterate through the list.
+   Expanding the scope of the work, for example by increasing range to -1x10^6 to 1x10^6 or increasing the number of steps to win from 10 to 100, 
+   the list method would take significantly more compute power and increase inefficiency in the code. Procedurally generated randint ensures that 
+   only the required resources are used when needed.
+   
+3) There are multiple methods of deployment. The user may have the "truest" experience by running the code on Docker. Alternatively, they can run the code
+   in their favourite IDE. For a more complex code, this could result in dependency and environment issues.
+   Future improvement: Although overkill, the code can be deployed in an AWS Workspace instance as practice. It would also be interesting to see if the docker
+   container could be deployed with Docker directly through AWS Appstream, which would remove the need for the user to install Docker. Alternatively, the code
+   can be implemented as an .exe file, then deployed directly through AWS Workspace or Appstream, further removing the need to download anything.
+   
+Limitations of current setup
+--------
+1) User input is only restricted to upper or lower "H" or "L". The user may instinctually want to enter "higher" or "lower", or look for an A, B or 1, 2 option.
+   These are not edge cases and should be integrated. 
+   Future improvement: Instead of creating an if else loop with all the above terms, a function can be defined that takes the user input and parses for the inputs,
+   then return a True for variants of H or False for L. Turning the user input into a boolean should increase readability of the code. It is uncertain if it would
+   improve the run speed of the code since the function would still have to be called at every user input. 
+   Maybe also include a try, except catch to give a snarky remark to non-sensical user inputs like qewrty.
+   
