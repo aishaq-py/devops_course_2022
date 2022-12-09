@@ -1,3 +1,20 @@
+Function of the game and how it works
+----------
+The "Higher and Lower" game, HL, presents the user with an initial number between 1 and 13. The user must then guess if the next number will be higher or lower than the current number. All subsequent numbers will be within the 1 to 13 range. The user should guess correctly 10 times to win. The user should only enter "H", "L", "h", or "l" as an answer. Other answers will terminate the game. Incorrect guesses will result in "You lose".
 
 
-https://hub.docker.com/repository/docker/aishaq1/python_higher_lower
+How to run the game
+--------
+There are three options on how to run the game.
+
+1) The game is deployed on Docker. Install docker and create an account on Docker.com. From Docker Hub, pull the following repository:
+      https://hub.docker.com/repository/docker/aishaq1/python_higher_lower
+   Run the container using "docker run -it python_higher_lower", where -it will run the program in interactive mode and allow for "H", "L" input from the user.
+   
+2) The code for the game is available on Github. Pull the following repository:
+      https://github.com/aishaq-py/devops_course_2022/tree/main/higher_lower_task
+   Run the python code in your favourite IDE.
+   
+3) Copy the code directly into your IDE. Due to the simplicity of the code and zero dependencies, the code can simply be copied and run.
+
+
